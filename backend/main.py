@@ -6,12 +6,8 @@ import requests
 from fastapi import FastAPI, WebSocket, WebSocketDisconnect
 from fastapi.middleware.cors import CORSMiddleware
 from dotenv import load_dotenv
-from deepgram import (
-    DeepgramClient,
-    DeepgramClientOptions,
-    LiveTranscriptionEvents,
-    LiveOptions,
-)
+from deepgram import DeepgramClient
+from deepgram.clients.live.v1 import LiveTranscriptionEvents, LiveOptions
 from groq import Groq
 
 load_dotenv()
