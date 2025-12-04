@@ -40,8 +40,18 @@ npm install
 npm run dev
 ```
 
+## Models Used
+- **STT**: Deepgram `nova-2`
+- **LLM**: Groq `llama-3.3-70b-versatile`
+- **TTS**: Sarvam `bulbul:v2` (Speaker: `anushka`)
+
 ## Usage
 1. Open the frontend URL (usually `http://localhost:5173`).
 2. Click the microphone button to start.
 3. Speak into your microphone.
 4. The AI will respond with audio.
+
+## Troubleshooting
+- **Port 8000 already in use**: If the backend fails to start, check if another process is using port 8000 (`lsof -ti:8000 | xargs kill -9`).
+- **Deepgram Connection Error**: Ensure your API key is valid and you are using the correct model configuration.
+- **Sarvam 400 Error**: Ensure you are using `bulbul:v2` as the model and a valid speaker like `anushka`.
